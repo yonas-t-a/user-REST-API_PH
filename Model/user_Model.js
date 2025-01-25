@@ -2,11 +2,11 @@ import { sequelizeConnection } from "../config/db-config.js";
 import { DataTypes } from "sequelize";
 /**
  * The user object has the following Properties
- * @id : int
- * @name : string
- * @email : string
+ * @property {INTEGER} id : userId Authinc
+ * @property {STRING} name: UserName not NUll,
+ * @property {STRING} email: UserEmail not null.
  */
-const user = sequelizeConnection.define('User',{
+export const user = sequelizeConnection.define('User',{
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
